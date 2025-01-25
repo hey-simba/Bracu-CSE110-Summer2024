@@ -1,0 +1,41 @@
+#Task 7
+
+import java.util.Scanner;
+public class Task_7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the 1st string: ");
+        String str1 = sc.nextLine().toLowerCase();
+        System.out.print("Enter the 2nd string: ");
+        String str2 = sc.nextLine().toLowerCase();
+        String res = "";
+        for (int i = 0; i <= str1.length()-1; i++) {
+            char c1 = str1.charAt(i);
+            boolean flag = false; 
+            for (int j = 0; j <= str2.length()-1; j++) {
+                if (c1 == str2.charAt(j)) {
+                    flag = true; 
+                    break;
+                }
+            }
+
+            if (!flag) {
+                res += c1;
+            }
+        }
+        for (int i = 0; i <= str2.length()-1; i++) {
+            char c2 = str2.charAt(i);
+            boolean flag = false;
+            for (int j = 0; j <= str1.length()-1; j++) {
+                if (c2 == str1.charAt(j)) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag) {
+                res += c2;
+            }
+        }
+        System.out.println(res.toUpperCase());
+    }
+}

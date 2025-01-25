@@ -1,0 +1,53 @@
+#Task 8
+import java.util.Scanner;
+public class Task_8
+{
+    public static void main(String[]args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter string: ");
+        String str= sc.nextLine();
+        int count= 1;
+        String new_str= "";
+        for(int i=0; i<=str.length()-1; i++)
+        {
+            char ch= str.charAt(i);
+            if(ch>='a' && ch<='z' || ch>='A' && ch<='Z')
+            {
+                if(count%2==0)
+                {
+                    
+                    if( ch>='A' && ch<='Z')
+                    {
+                        new_str+=ch;
+                    }
+                    else
+                    {
+                        int ascii= (int)ch;
+                        ascii= ascii-32;
+                        new_str+= (char)ascii;
+                    }
+                }
+                else
+                {
+                    if( ch>='a' && ch<='z')
+                    {
+                        new_str+=ch;
+                    }
+                    else
+                    {
+                        int ascii= (int)ch;
+                        ascii= ascii+32;
+                        new_str+= (char)ascii;
+                    }
+                }
+                count++;
+            }
+            else
+            {
+                new_str+=ch;
+            }
+        }
+        System.out.println(new_str);
+    }
+}

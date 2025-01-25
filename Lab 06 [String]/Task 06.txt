@@ -1,0 +1,37 @@
+#Task 6
+import java.util.Scanner;
+
+public class Task_6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your string: ");
+        String str = sc.nextLine();
+        String temp = "";  
+        String reverse = "";
+        
+        for (int i = str.length() - 1; i >= 0; i--)
+        {
+            char ch = str.charAt(i);
+
+            if (ch != ' ') 
+            {
+                temp += ch;
+            } 
+            else 
+            {
+                for (int j = temp.length() - 1; j >= 0; j--) 
+                {
+                    reverse += temp.charAt(j);
+                }
+                reverse += ' ';
+                temp = "";
+            }
+        }
+        for (int j = temp.length() - 1; j >= 0; j--) 
+        {
+            reverse += temp.charAt(j);
+        }
+        System.out.println("Reversed sentence: ");
+        System.out.println(reverse);
+    }
+}
