@@ -1,0 +1,34 @@
+//Question 9
+import java.util.Scanner;
+public class Question9
+{
+  public static void main (String[]args)
+  {
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter your payment");
+    int payment= sc.nextInt();
+    System.out.println("Enter your age");
+    int age= sc.nextInt();
+    if (age>=18)
+    {
+        if (payment<10000)
+        {
+            System.out.println("Your tax amounts is 0 Tk");
+        }
+        else if (payment>=10000 && payment<=20000)
+        {
+            int tax= payment*5/100;
+            System.out.println("Your tax amounts is " +tax+ "Tk");
+        }
+        else if (payment>20000)
+        {
+          int tax= payment*10/100; 
+          System.out.println("Your tax amounts is " +tax+ "Tk");
+        }
+    }
+    else if (age<18)
+    {
+        System.out.println("Your tax amounts is 0 Tk");
+    }
+  }
+}

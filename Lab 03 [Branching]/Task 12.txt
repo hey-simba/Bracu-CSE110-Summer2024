@@ -1,0 +1,46 @@
+//Question12
+import java.util.Scanner;
+public class question12
+{
+  public static void main(String[]args)
+  {
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter the amount the customer need to pay(Taka)");
+    int amount= sc.nextInt();
+    System.out.println("Enter the amount, customer gave(Taka)");
+    int given= sc.nextInt();
+    if (amount<given)
+    {
+        int return_value= given- amount;
+        System.out.println("The returned amount is " +return_value+ "taka.");
+        if (return_value!= 0)
+        {
+            int hundred= return_value/100;
+            System.out.println("100 taka note:"+ hundred);
+            int remaining_hundred= return_value%100;
+            int fifty= remaining_hundred/50;
+            System.out.println("50 taka note:"+ fifty);
+            int remaining_fifty= remaining_hundred%50;
+            int twenty= remaining_fifty/20;
+            System.out.println("20 taka note:"+ twenty);
+            int remaining_twenty= remaining_fifty%20;
+            int ten= remaining_twenty/10;
+            System.out.println("10 taka note:"+ ten);
+            int remaining_ten= remaining_twenty%10;
+            int five= remaining_ten/5;
+            System.out.println("5 taka coin:"+ five);
+            int remaining_five= remaining_ten%5;
+            int two= remaining_five/2;
+            System.out.println("2 taka coin:"+ two);
+            int remaining_two= remaining_five%2;
+            System.out.println("1 taka coin:"+ remaining_two);
+        }
+        
+    }
+    else
+    {
+      int return_value= amount-given;
+        System.out.println("Please pay " +return_value+ " taka more.");  
+    }
+  }
+}

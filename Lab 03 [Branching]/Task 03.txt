@@ -1,0 +1,44 @@
+
+
+//Qustion 3
+import java.util.Scanner;
+public class Question3
+{
+  public static void main (String[]args)
+  {
+    Scanner sc= new Scanner(System.in);
+    
+    
+    System.out.println("Enter your 1st number");
+    int first= sc.nextInt();
+    
+    System.out.println("Enter your 2nd number");
+    int second= sc.nextInt();
+    
+    sc.nextLine();
+    System.out.println("Enter your operator");
+    String operator= sc.nextLine();
+    
+    if (operator.equals("+"))
+    {
+        int sum= first + second;
+        System.out.println(sum);
+    }
+    else if (operator.equals("-"))
+    {
+        int minus= first - second;
+        System.out.println(minus);
+    }
+    else if (operator.equals("*"))
+    {
+        int multi= first*second;
+        System.out.println(multi);
+    }
+    else if (operator.equals("/"))
+    {
+        int division= first/second;
+        System.out.println(division);
+    }
+   
+  }
+}

@@ -1,0 +1,25 @@
+//Question 8
+import java.util.Scanner;
+public class Question8
+{
+    public static void main(String[]agrs)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Please enter your student ID");
+        int id = sc.nextInt();
+        int year= id/1000000;
+        int session= (id/100000)%10;
+        if (session==1)
+        {
+            System.out.println("Student Joined BRAC in Spring "+ year);
+        }
+        else if (session==2)
+        {
+          System.out.println("Student Joined BRAC in Fall "+ year);  
+        }
+        else if (session==3)
+        {
+           System.out.println("Student Joined BRAC in Summer "+ year);  
+        }
+    }
+}

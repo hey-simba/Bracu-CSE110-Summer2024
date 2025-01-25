@@ -1,0 +1,30 @@
+//Question6
+import java.util.Scanner;
+public class Question6
+{
+    public static void main(String[]agrs)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Please enter your number");
+        int num= sc.nextInt();
+        if (num>0)
+        {
+            if (num%2==0)
+            {
+                System.out.println("Number is positive and even");
+            }
+            else
+            {
+                 System.out.println("Number is positive and odd");
+            }
+        }
+        else if (num<0)
+        {
+            System.out.println("Number is negative");
+        }
+        else
+        {
+            System.out.println("Number is zero");
+        }
+    }
+}
