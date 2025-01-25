@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+public class problem_5
+{
+    public static void main(String[]agrs)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter first value");
+        int first_val= sc.nextInt();
+        System.out.println("Enter change value");
+        int change= sc.nextInt();
+        System.out.println("Enter last value");
+        int last_val= sc.nextInt();
+        int count=first_val;
+        for ( int i=first_val; i<=last_val; i+=change)
+        {
+            
+            if (last_val-count<change)
+            {
+                System.out.print(count);
+            }
+            else
+            {
+                
+                System.out.print(count+",");
+            }
+            count+=change;
+        }
+    }
+}

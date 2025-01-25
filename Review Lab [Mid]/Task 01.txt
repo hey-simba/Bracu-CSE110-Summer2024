@@ -1,0 +1,15 @@
+
+import java.util.Scanner;
+public class problem_1
+{
+    public static void main (String[]agrs)
+    {
+       Scanner sc= new Scanner(System.in);
+       System.out.println("Enter your total distance");
+       int distance= sc.nextInt();
+       System.out.println("Enter your total fuel");
+       double fuel= sc.nextDouble();
+       double avg= distance/fuel;
+       System.out.printf("%.3f km/l ",avg);
+    }
+}

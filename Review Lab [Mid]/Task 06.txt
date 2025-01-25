@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Potol
+{
+    public static void main(String[]args)
+    {
+      Scanner sc= new Scanner(System.in);
+      System.out.println("Enter your number");
+      int num= sc.nextInt();
+      int store= num;
+      int count= 0;
+      while(num>0)
+      {
+          num= num/10;
+          count++;
+      }
+      int sum= 0;
+      int i= 0;
+      while (i<count)
+      {
+        int digit= store%10;
+        
+        int pow= (int)Math.pow(2,i);
+        int res= digit*pow;
+        store= store/10; 
+        sum+=res;
+        i++;
+      }
+      System.out.println(sum);
+    }
+}
