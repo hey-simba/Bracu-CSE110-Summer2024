@@ -1,0 +1,45 @@
+#Task 6
+public class Task_6
+{
+    public static void main (String[]args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter the length of the array: ");
+        int len= sc.nextInt();
+        float[] array= new float[len];
+        for (int i=0; i<=len-1 ; i++)
+        {
+            System.out.print("Enter a number: ");
+            float num= sc.nextFloat();
+            array[i]= num;
+        }
+        float maximum_value= array[0];
+        int maximum_index= 0;
+        float minimum_value=array[0];
+        int minimum_index=0;
+        float sum=0;
+        for (int i=0; i<=len-1 ; i++)
+        {
+           float check= array[i];
+           sum+= check;
+           
+           if (check> maximum_value)
+           {
+               maximum_value= array[i];
+               maximum_index= i;
+           }
+           
+           if (check<minimum_value)
+           {
+               minimum_value= array[i];
+               minimum_index=i;
+           }
+        }
+        float avg= sum/len;
+        System.out.println("Maximum element " + maximum_value + " found at index " +maximum_index );
+        System.out.println("Minimum element " + minimum_value + " found at index " +minimum_index );
+        System.out.println("Summation: " + sum);
+        System.out.println("Average: " + avg);
+        
+    }
+}

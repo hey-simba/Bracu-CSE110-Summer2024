@@ -1,0 +1,44 @@
+
+#Task 3
+import java.util.Scanner;
+public class Task_3
+{
+    public static void main (String[]args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter the length of the array: ");
+        int length= sc.nextInt();
+        int[] array= new int[length];
+        for (int i=0; i<=length-1; i++)
+        {
+            System.out.print("Enter a number: ");
+            int value= sc.nextInt();
+            array[i]=value;
+        }
+        int[] new_array= new int[length];
+        for (int i=0; i<=length-1; i++)
+        {
+           int value= array[i];
+           new_array[new_array.length-1-i]= value;
+        }
+        System.out.println("Reversed using a new array: ");
+        for(int i= 0; i<= new_array.length-1; i++)
+        {
+            System.out.print(new_array[i] + " ");
+        }
+        
+        for (int i=0; i<= (array.length-1)/2 ; i++)
+        {
+            int temp= array[i];
+            array[i] = array[array.length-1-i];
+            array[array.length-1-i]= temp;
+        }
+        System.out.println();
+        System.out.println("Reversed the original array:");
+        for(int i= 0; i<= new_array.length-1; i++)
+        {
+            System.out.print(new_array[i] + " ");
+        }
+        
+    }
+}
