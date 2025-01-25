@@ -1,0 +1,36 @@
+#Task 8
+import java.util.Scanner;
+public class Task_8 {
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Start: ");
+        int start = sc.nextInt();
+        System.out.println("End: ");
+        int end = sc.nextInt();
+        System.out.println("Armstrong numbers: ");
+        
+        for (int i = start; i <= end; i++)
+        {
+            int number = i;
+            int digit = 0;
+            while (number > 0) 
+            {
+                number = number / 10;
+                digit++;
+            }
+            int sum = 0;
+            int number_2 = i;
+            while (number_2 > 0)
+            {
+                int remainder = number_2 % 10;
+                sum += (int) Math.pow(remainder, digit);
+                number_2 = number_2 / 10;
+            }
+            if (sum == i)
+            {
+                System.out.println(i);
+            }
+        }
+    }
+}

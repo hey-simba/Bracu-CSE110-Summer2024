@@ -1,0 +1,35 @@
+#Task 1
+import java.util.Scanner;
+public class Task_1
+{
+    public static void main(String[]args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter how many prime numbers you want: ");
+        int prime= sc.nextInt();
+        int prime_counter= 0;
+        int num=2;
+        while(true)
+        {
+           int counter= 0;
+           for (int i=1; i<=num ; i++)
+           {
+              if (num%i==0)
+              {
+                  counter+=1;
+              }
+           }
+           if (counter==2)
+           {
+               System.out.println(num);
+               prime_counter++;
+           }
+           if (prime_counter==prime)
+           {
+               break;
+           }
+           
+           num++;
+        }
+    }
+}
