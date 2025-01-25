@@ -1,0 +1,19 @@
+//Question 4
+import java.util.Scanner;
+public class question_4
+{
+  public static void main (String[]agrs)
+  {
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter your number");
+    int num= sc.nextInt();
+    System.out.println("Divisors of " +num +": ");
+    for (int div= 1; div<=num; div++)
+    {
+      if (num%div==0)
+      {
+        System.out.println(div);
+      }
+    }
+  }
+}

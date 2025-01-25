@@ -1,0 +1,59 @@
+import java.util.Scanner;
+class question_11 
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your number: ");
+        int num = sc.nextInt();       
+        if (num < 2)
+        {
+            System.out.println(num + " is not a prime number.");
+        } 
+        else
+        {
+            boolean isPrime = true;
+            
+            for (int i = 2; i * i <= num; i++) 
+            {
+                if (num % i == 0) 
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) 
+            {
+                System.out.println(num + " is a prime number.");
+            } 
+            else 
+            {
+                System.out.println(num + " is not a prime number.");
+            }
+        }
+
+        if (num <= 1) 
+        {
+            System.out.println(num + " is not a perfect number.");
+        } 
+        else 
+        {
+            int sum = 0;
+            for (int i = 1; i < num; i++) 
+            {
+                if (num % i == 0) 
+                {
+                    sum += i;
+                }
+            }
+            if (sum == num) 
+            {
+                System.out.println(num + " is a perfect number.");
+            } 
+            else 
+            {
+                System.out.println(num + " is not a perfect number.");
+            }
+        }
+    }
+}

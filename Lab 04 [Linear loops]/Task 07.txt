@@ -1,0 +1,17 @@
+//Question 7
+import java.util.Scanner;
+public class question_7
+{
+  public static void main (String[] agrs)
+  {
+    Scanner sc= new Scanner(System.in);
+    int sum= 0;
+    for ( int n= 1; n<=10; n++)
+    {
+      System.out.println("Enter Number:"); 
+      int num= sc.nextInt();
+      sum+=num;
+      System.out.println("Sum+ "+sum);
+    } 
+  }
+}

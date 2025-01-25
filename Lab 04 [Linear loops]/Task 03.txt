@@ -1,0 +1,21 @@
+//Question 3
+import java.util.Scanner;
+public class question_3
+{
+  public static void main(String[]agrs)
+  {
+    Scanner sc= new Scanner(System.in);
+    while (true)
+    {
+      System.out.println("Enter Number: ");
+      int num= sc.nextInt();
+      if (num>0)
+      { 
+        int square= num*num;
+        System.out.println(num+"^2= "+ square); 
+      }
+      else 
+        break;
+    } 
+  }
+}

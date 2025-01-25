@@ -1,0 +1,41 @@
+//Question 1 (a)
+public class question_1_a
+{
+  public static void main(String[]agrs)
+  {
+    int i= 24;
+    while (i>=-6)
+    {
+      if (i!=-6)
+      {
+        System.out.print(i+ ", ");
+      }
+      else 
+      {
+        System.out.println(i);
+      }
+      i= i-6;
+    }
+  }
+}
+
+//Question 1 (b)
+public class question_1_b
+{
+  public static void main(String[]agrs)
+  {
+    int i= -10;
+    while (i<=20)
+    {
+      if (i!=20)
+      {
+        System.out.print(i+ ", ");
+      }
+      else 
+      {
+        System.out.println(i);
+      }
+      i= i+5;
+    }
+  }
+}

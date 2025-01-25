@@ -1,0 +1,23 @@
+//Question 2
+import java.util.Scanner;
+public class question_2
+{
+  public static void main(String[]agrs)
+  {
+    Scanner sc= new Scanner(System.in);
+    System.out.println( "N =");
+    int n= sc.nextInt();
+    System.out.println("Input the " + n+ " numbers:");
+    int sum=0;
+    
+    for (int i=1; i<=5; i++)
+    {
+     int num= sc.nextInt();
+     sum= sum+num;
+    }
+    System.out.println("The sum of " + n + " no is: "+ sum);
+    double avg= sum/n;
+    System.out.println("The Average is: "+avg);
+    
+  }
+}
