@@ -1,0 +1,47 @@
+#Task 2
+
+public class Task_2
+{
+    
+    public static void main(String[]args)
+    {
+       double area = circleArea(5);
+       System.out.println(area);
+       double volume = sphereVolume(5);
+       System.out.println(volume);
+       findSpace(10,"circle"); 
+
+    }
+    public static double circleArea(int x)
+    {
+        double area= 3.1416 * Math.pow(x,2);
+        return area;
+    }
+    public static double sphereVolume(int x)
+    {
+        double volume= (4.0/3.0)* 3.1416* Math.pow(x,3);
+        return volume;
+    }
+    
+    public static void findSpace(int x, String y)
+    {
+        
+        if (y.equals("circle"))
+        {
+            double res= circleArea(x);
+            System.out.println(res);
+            
+        }
+        else if(y.equals("sphere"))
+        {
+            double res= sphereVolume(x);
+            System.out.println(res);
+        }
+        else
+        {
+            System.out.println("Wrong Parameter");
+        }
+        
+    }
+}
+

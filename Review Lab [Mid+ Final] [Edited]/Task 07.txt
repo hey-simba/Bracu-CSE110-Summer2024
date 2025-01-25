@@ -1,0 +1,105 @@
+#Task 7 (A,B)
+public class Task_7
+{
+    public static void main (String[]args)
+    {
+        int vowel= isVowel("The quick brown fox jumps over the lazy dog"); 
+        System.out.println ("Number of vowels in the string:" + vowel);
+        int cons= isConsonant("The quick brown fox jumps over the lazy dog");
+        System.out.println("Cons "+ cons);
+    }
+    public static int isVowel(String x)
+    {
+        int count=0;
+        String str= x.toUpperCase();
+        for(int i=0; i<=str.length()-1; i++)
+        {
+            char ch= str.charAt(i);
+            if(ch=='A' || ch=='E'|| ch=='I'|| ch=='O' || ch=='U')
+            {
+                count+=1;
+            }
+        }
+        return count;
+    }
+    public static int isConsonant(String x)
+    {
+        int count=0;
+        String str= x.toUpperCase();  
+        for(int i=0; i<=str.length()-1; i++)
+        {
+           char ch= str.charAt(i);
+           if(ch >= 'A' && ch <= 'Z' && !(ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'))
+            {
+                count+=1;
+            }
+        }
+        return count;
+    }
+
+}
+
+#Task 7 (C)
+public class Task_7(C)
+{
+    public static void main (String[]args)
+    {
+        String [] names = {"Bob", "Alice", "Max", "Marry", "Rosy"};
+        
+        System.out.println( "The total number of vowels in the array is:" + vowelSum(names));
+        System.out.println( "The total number of consonants in the array is:" + consonantSum(names));
+
+
+    }
+    public static int isVowel(String x)
+    {
+        int count=0;
+        String str= x.toUpperCase();
+        for(int i=0; i<=str.length()-1; i++)
+        {
+            char ch= str.charAt(i);
+            if(ch=='A' || ch=='E'|| ch=='I'|| ch=='O' || ch=='U')
+            {
+                count+=1;
+            }
+        }
+        return count;
+    }
+    public static int isConsonant(String x)
+    {
+        int count=0;
+        String str= x.toUpperCase();  
+        for(int i=0; i<=str.length()-1; i++)
+        {
+           char ch= str.charAt(i);
+           if(ch >= 'A' && ch <= 'Z' && !(ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'))
+            {
+                count+=1;
+            }
+        }
+        return count;
+    }
+    public static int vowelSum(String[] x)
+    {
+        int vowsum=0;
+        for (int i=0; i<=x.length-1; i++)
+        {
+            String str= x[i];
+            int vow= isVowel(str);
+            vowsum+=vow;
+        }
+        return vowsum;
+    }
+    public static int consonantSum(String[] x)
+    {
+        int consum=0;
+        for (int i=0; i<=x.length-1; i++)
+        {
+            String str= x[i];
+            int con= isConsonant(str);
+            consum+=con;
+        }
+        return consum;
+    }
+
+}

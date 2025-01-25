@@ -1,0 +1,82 @@
+import java.util.Scanner;
+public class Task_1
+{
+    public static void evenChecker(int x)
+    {
+        if(x%2==0)
+        {
+            System.out.println("Even!!");
+        }
+        else
+        {
+            System.out.println("Odd!");
+        }
+    }
+    public static boolean isEven(int x)
+    {
+        boolean flag= true;
+        if (x%2==0)
+        {
+            flag= true;
+        }
+        else
+        {
+            flag= false;
+        }
+        return flag;
+    }
+    public static boolean isPos(int x)
+    {
+        boolean flag= true;
+        if(x>=0)
+        {
+            flag= true;
+        }
+        else
+        {
+            flag=false;
+        }
+        return flag;
+    }
+    public static void sequence(int n)
+    {
+       boolean res= isPos(n);
+       if(res==true)
+       {
+           for (int i= 0; i<=n; i++)
+           {
+               boolean res_num= isEven(i);
+               if(res_num==true)
+               {
+                   System.out.print(i+ " ");
+               }
+           }
+               
+       }
+       else
+       {
+           for (int i=n; i<=-1; i++)
+           {
+               boolean res_num= isEven(i);
+               if(res_num==false)
+               {
+                   System.out.print(i + " ");
+               }
+           }
+       }
+    }
+    public static void main(String[]args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter your number: ");
+        int num= sc.nextInt();
+        evenChecker(num);
+        boolean result = isEven(num);
+        System.out.println( result );
+        boolean result2 = isPos(-5);
+        System.out.println( result2 );
+        sequence(-7);
+
+
+    }
+}

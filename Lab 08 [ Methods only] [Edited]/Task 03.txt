@@ -1,0 +1,31 @@
+
+#Task 3
+import java.util.Scanner;
+public class Task_3
+{
+    public static void main(String[]args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter your number: ");
+        int num= sc.nextInt();
+        boolean check = isPrime(num);
+        System.out.println(check);
+    }
+    public static boolean isPrime(int x)
+    {
+        boolean flag= false;
+        int count=0;
+        for(int i=1 ; i<=x; i++)
+        {
+            if(x%i==0)
+            {
+                count+=1;
+            }
+        }
+        if (count==2)
+        {
+            flag= true;
+        }
+        return flag;
+    }
+}

@@ -1,0 +1,32 @@
+# right triangle with hallow
+import java.util.Scanner;
+public class square
+{
+    public static void main(String[] agrs)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter row: ");
+        int row= sc.nextInt();
+        int column= row;
+        for (int i=1; i<row; i++)
+        {
+            for (int j=1; j<=i; j++)
+            {
+                if ( j==1 || j==i)
+                {
+                    System.out.print(j+" ");
+                }
+                else
+                {
+                   System.out.print("* ");  
+                }
+                
+            }
+        System.out.println();
+        }
+        for (int i= 1; i<=row; i++)
+        {
+           System.out.print(i+ " "); 
+        }
+    }
+}

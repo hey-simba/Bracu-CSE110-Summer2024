@@ -1,0 +1,22 @@
+#Task 5
+public class Task_5 {
+    public static void main(String[] args) {
+        double t = calcTax(16, 20000);
+        System.out.println("Tax: " + t);
+    }
+
+    public static double calcTax(int age, int salary) {
+        double tax = 0.0;
+
+        if (age >= 18) {
+            if (salary < 10000) {
+                tax = 0.0;
+            } else if (salary >= 10000 && salary <= 20000) {
+                tax = salary * 0.07;
+            } else if (salary > 20000) {
+                tax = salary * 0.12; 
+            }
+        }
+        return tax;
+    }
+}
