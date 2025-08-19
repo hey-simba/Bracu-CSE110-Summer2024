@@ -1,0 +1,40 @@
+//task 9
+import java.util.Scanner;
+public class Task9 {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter a password: ");
+            String pass = sc.nextLine();
+
+
+            boolean uppercase = false;
+            boolean lowercase = false;
+            boolean digit = false;
+            boolean special = false;
+            
+            if (pass.length() >= 8) {
+                for (int i = 0; i < pass.length(); i++) {
+                    char ch = pass.charAt(i);
+                    if (Character.isUpperCase(ch)) {
+                        uppercase = true;
+                    }
+                    else if (Character.isLowerCase(ch)) {
+                        lowercase = true;
+                    }
+                    else if (Character.isDigit(ch)) {
+                        digit = true;
+                    }
+                    else if (ch != ' ') {
+                        special = true;
+                    }
+                }
+            }
+            
+            if (uppercase && lowercase && digit && special) {
+                System.out.println("True");
+            }
+            else {
+                System.out.println("False");
+            }
+        }
+}
